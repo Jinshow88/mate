@@ -2,6 +2,12 @@ spring:
   config:
     import: optional:file:.env
     
+  datasource:
+    url: jdbc:mysql://localhost:3306/yourdb
+    username: root
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    
   jpa:
     hibernate:
       ddl-auto: none
@@ -9,7 +15,7 @@ spring:
     
 springdoc:
   api-docs:
-    version: openapi_3_1
+    enabled: true
 
   swagger-ui:
     path: /swagger
