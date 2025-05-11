@@ -22,6 +22,6 @@ public class UserController {
     private final UserService service;
 
     public ResponseEntity<? super GetUserResponseDto> getUser(GetUserRequestDto dto){
-        
+        return service.getUser(dto);
     }
 }
